@@ -1,0 +1,108 @@
+# Scene
+/* 背景未加框設定 */
+.background {
+  background-color: #222; /* 外部底板稍暗 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 全屏展示 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 圖片容器無附加額外框 */
+.image-container {
+  position: relative;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 柔和陰影 */
+}
+
+/* 圖片基本樣式 */
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(90%); /* 圖片適當調暗 */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 懸停效果增加動態吸引力 */
+.image-container:hover img {
+  transform: scale(1.03); 
+  filter: brightness(85%);
+}
+
+/* 文字區域樣式 */
+.text-overlay {
+  position: absolute;
+  bottom: 12%; /* 調整文字靠近底部但突出主視覺 */
+  left: 8%; /* 左右邊距維持平衡 */
+  right: 8%;
+  color: #ffd700; /* 亮黃色文字 */
+  background: rgba(0, 0, 0, 0.4); /* 半透明黑背景 */
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 響應式適配 */
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 1rem;
+  }
+}
+<div class="image-container">
+  <img src="your-image.jpg" alt="活動主要圖片">
+  <div class="text-overlay bright-yellow">探索未來藝術的可能性，觸碰你的想像力！</div>
+</div>
+/* 圖片容器無附加額外框 */
+.image-container {
+  position: relative;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 柔和陰影 */
+}
+
+/* 圖片基本樣式 */
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(90%); /* 圖片適當調暗 */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 懸停效果增加動態吸引力 */
+.image-container:hover img {
+  transform: scale(1.03); 
+  filter: brightness(85%);
+}
+
+/* 文字區域樣式 */
+.text-overlay {
+  position: absolute;
+  bottom: 12%; /* 調整文字靠近底部但突出主視覺 */
+  left: 8%; /* 左右邊距維持平衡 */
+  right: 8%;
+  color: #ffd700; /* 亮黃色文字 */
+  background: rgba(0, 0, 0, 0.4); /* 半透明黑背景 */
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 響應式適配 */
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 1rem;
+  }
+}
